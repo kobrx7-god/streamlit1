@@ -1,8 +1,7 @@
 import streamlit as st
 from openai import OpenAI
-import newconfig
 
-api = newconfig.api
+api = st.secrets["apikey"]
 client = OpenAI(api_key = api, base_url = "https://api.groq.com/openai/v1")
 model = 'openai/gpt-oss-20b'
 
